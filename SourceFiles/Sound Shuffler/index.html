@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <title>My Game</title>
+    <link rel="stylesheet"  href="./style.css"/>
+
+    <!-- Import the webpage's javascript file -->
+    <script src="./script.js"  defer></script>
+  </head>
+  <body>
+    
+    <!-- The wrapper and content divs set margins and positioning -->
+    <div class="wrapper">
+      <div class="content" role="main">
+        <!-- This is the start of content for our page -->
+        <h1 class="title">The Sound Shuffler</h1>
+        
+    
+        <!-- Instructions on using this project -->
+        <div class="instructions" style="text-align:center;">
+          <p id ="BeginMsg" onclick = "startGame()">
+             Welcome! Click Start to Begin
+          </p>
+          
+          <p id = "EndMsg" class = "hidden">
+            Click Stop to End
+          </p>
+      
+          <button id="startBtn"  onclick="startGame()">
+            Start
+          </button>
+          
+          <button id="stopBtn"  class="hidden" onclick = "stopGame()">
+            Stop
+          </button>
+          
+          <div id="gameButtonArea">
+            <button id="button1" onclick="guess(1)" class="hidden" onmousedown="startTone(1)" onmouseup="stopTone()" ></button>
+            
+            <button id="button2" onclick="guess(2)" class="hidden" onmousedown="startTone(2)" onmouseup="stopTone()"></button>
+            
+            <button id="button3" onclick="guess(3)" class="hidden" onmousedown="startTone(3)" onmouseup="stopTone()"></button>
+            
+            <button id="button4" onclick="guess(4)" class="hidden" onmousedown="startTone(4)" onmouseup="stopTone()"></button>
+          </div>
+          <p id ="Prompt" class="hidden" >
+            <b> Wait for the Sequence to end, then replay the Sequence! </b>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
